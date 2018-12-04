@@ -1,0 +1,54 @@
+irun(64): 14.20-s020: (c) Copyright 1995-2015 Cadence Design Systems, Inc.
+TOOL:	irun(64)	14.20-s020: Started on Jan 12, 2017 at 14:33:44 MET
+irun
+	-gui
+	-debug
+	-64
+	-sv
+	-v93
+	-loadvpi libvpi
+	+access+rwc
+	-nclibdirname sim_build
+	-plinowarn
+	test.sv
+	-ncfatal CUNOTB
+	-nowarn CUVWSP:CSINVI:CUNDDR:CUDEFB:CUSRCH
+	-licqueue
+	-aps_args "+lqt 120"
+	-incdir /mirror/8500/libraries/ams/include/1V2
+	-relax
+
+   The following environmental variables have been detected. 
+   These options will be used directly by the executables and ignored by irun.
+	NCVLOGOPTS:  -incdir "/mirror/8500/libraries/ams/include/1V2"
+
+ncsim: *W,WSEM2009: This SystemVerilog simulation was not run with the '-sem2009' option which provides 1800-2009 SystemVerilog simulation semantics. In future, '-sem2009' functionality will become the default for SystemVerilog environments. Until then, run your SystemVerilog  simulations using the '-sem2009' option and report any functional or performance issues to Cadence. To disable this warning, use the '-nowarn WSEM2009' command-line option. There is no impact to non-SystemVerilog environments.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /cad/eda/cadence/INCISIV/14.20.020/linux_i/tools/inca/files/ncsimrc
+ncsim> run
+sv                    0, a:x + b:1 = c:x
+py: hello world at 10000
+sv                10000, a:1 + b:1 = c:2
+py: hello world at 20000
+sv                20000, a:2 + b:1 = c:3
+py: hello world at 30000
+sv                30000, a:3 + b:1 = c:4
+py: hello world at 40000
+sv                40000, a:4 + b:1 = c:5
+py: hello world at 50000
+sv                50000, a:5 + b:1 = c:6
+py: hello world at 60000
+sv                60000, a:6 + b:1 = c:7
+py: hello world at 70000
+sv                70000, a:7 + b:1 = c:8
+py: hello world at 80000
+sv                80000, a:8 + b:1 = c:9
+py: hello world at 90000
+sv                90000, a:9 + b:1 = c:10
+Simulation complete via $finish(1) at time 100 NS + 0
+./test.sv:13         $finish;
+ncsim> exit
+TOOL:	irun(64)	14.20-s020: Exiting on Jan 12, 2017 at 15:14:03 MET  (total: 00:40:19)

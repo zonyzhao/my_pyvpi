@@ -1,0 +1,114 @@
+irun(64): 15.20-s018: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s018: Started on Nov 01, 2018 at 15:52:15 MET
+irun
+	-debug
+	-64
+	-sv
+	-v93
+	-loadvpi pyvpi.so
+	+access+rwc
+	-nclibdirname sim_build
+	-plinowarn
+	test.sv
+	-ncfatal CUNOTB
+	-nowarn CUVWSP:CSINVI:CUNDDR:CUDEFB:CUSRCH
+	-licqueue
+	-aps_args "+lqt 120"
+	-incdir /mirror/8500/libraries/ams/include/1V2
+	-relax
+
+   The following environmental variables have been detected. 
+   These options will be used directly by the executables and ignored by irun.
+	NCVLOGOPTS:  -incdir "/mirror/8500/libraries/ams/include/1V2"
+
+file: test.sv
+	interface worklib.pyAESECBenc:sv
+		errors: 0, warnings: 0
+	interface worklib.pyAESECBdec:sv
+		errors: 0, warnings: 0
+	interface worklib.pyadaptor:sv
+		errors: 0, warnings: 0
+	module worklib.top:sv
+		errors: 0, warnings: 0
+ncvlog: *W,SPDUSD: Include directory /mirror/8500/libraries/ams/include/1V2 given but not used.
+ncvlog: *W,SPDUSD: Include directory /mirror/8500/libraries/ams/include/1V2 given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		EE_pkg
+		$unit_0x621c8c1a
+		top
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: ...
+    tv=`rtype(driver[i].V);
+                         |
+ncelab: *W,NSVCER (/cad/eda/cadence/INCISIV/15.20.018/linux_i/tools/affirma_ams/etc/dms/EE_pkg.sv,101|25): Real valued operands to === (case equality) operator is non-standard Verilog [4.1(IEEE)].
+    ti=`rtype(driver[i].I);
+                         |
+ncelab: *W,NSVCER (/cad/eda/cadence/INCISIV/15.20.018/linux_i/tools/affirma_ams/etc/dms/EE_pkg.sv,102|25): Real valued operands to === (case equality) operator is non-standard Verilog [4.1(IEEE)].
+    tr=`rtype(driver[i].R);
+                         |
+ncelab: *W,NSVCER (/cad/eda/cadence/INCISIV/15.20.018/linux_i/tools/affirma_ams/etc/dms/EE_pkg.sv,103|25): Real valued operands to === (case equality) operator is non-standard Verilog [4.1(IEEE)].
+................. Done
+	Using implicit TMP libraries; associated with library worklib
+	Generating native compiled code:
+		dmsLib.EE_pkg:verilog_package <0x5eb632e0>
+			streams:   2, words: 13693
+		worklib.pyAESECBdec:sv <0x21d1ae4b>
+			streams:   1, words:   494
+		worklib.pyAESECBenc:sv <0x49b8cbd0>
+			streams:   1, words:   494
+		worklib.pyadaptor:sv <0x25d0dcd1>
+			streams:   1, words:   247
+		worklib.top:sv <0x30a42f64>
+			streams:  15, words: 13222
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              1       1
+		Interfaces:           3       3
+		Verilog packages:     1       1
+		Resolved nets:        0       1
+		Registers:           31      29
+		Vectored wires:      13       -
+		Always blocks:        3       3
+		Initial blocks:       5       5
+		Pseudo assignments:   8       8
+		Compilation units:    1       1
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /cad/eda/cadence/INCISIV/15.20.018/linux_i/tools/inca/files/ncsimrc
+ncsim> run
+p is p
+p type = vpiStructNet
+P Member name = top.p.V 
+P Member name = top.p.I 
+P Member name = top.p.R 
+p type name = EEnet
+py a:0 + b:0 = c:0
+sv                    0, key:00000000000000000000000000000000 + text:0000000000000000000000000000000000000000000000000000000000000000 = enc:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dec:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+py key:2b7e151628aed2a6abf7158809cf4f3c + text:6bc1bee22e409f96e93d7e117393172aae2d8a571e03ac9c9eb76fac45af8e51 = enc:3ad77bb40d7a3660a89ecaf32466ef97f5d3d58503b9699de785895a96fdbaaf
+p is p
+p type = vpiStructNet
+P Member name = top.p.V 
+P Member name = top.p.I 
+P Member name = top.p.R 
+p type name = EEnet
+py a:1 + b:2 = c:3
+py key:2b7e151628aed2a6abf7158809cf4f3c + dec:3ad77bb40d7a3660a89ecaf32466ef97f5d3d58503b9699de785895a96fdbaaf = text:6bc1bee22e409f96e93d7e117393172aae2d8a571e03ac9c9eb76fac45af8e51
+sv                   10, key:2b7e151628aed2a6abf7158809cf4f3c + text:6bc1bee22e409f96e93d7e117393172aae2d8a571e03ac9c9eb76fac45af8e51 = enc:3ad77bb40d7a3660a89ecaf32466ef97f5d3d58503b9699de785895a96fdbaaf, dec:6bc1bee22e409f96e93d7e117393172aae2d8a571e03ac9c9eb76fac45af8e51
+p is p
+p type = vpiStructNet
+P Member name = top.p.V 
+P Member name = top.p.I 
+P Member name = top.p.R 
+p type name = EEnet
+py a:2 + b:3 = c:5
+Simulation complete via $finish(1) at time 200 NS + 0
+./test.sv:115     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s018: Exiting on Nov 01, 2018 at 15:52:20 MET  (total: 00:00:05)

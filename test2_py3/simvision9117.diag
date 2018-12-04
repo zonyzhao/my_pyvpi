@@ -1,0 +1,84 @@
+*** Message Type: info ***
+When: Tue Jun 05 03:27:01 PM MEST 2018
+SimVision started.
+Version: TOOL:  simvision(64)   15.20-s036
+User: dzhao
+Host: dbsrvcomp-11.diasemi.com
+Platform: Linux/x86_64/2.6.32-642.3.1.el6.x86_64
+Started: Tue Jun 05 03:27:01 PM MEST 2018
+Command: /cad/eda/cadence/INCISIV/15.20.036/linux_i/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:dbsrvcomp-11.diasemi.com:50899 -64BIT -nocopyright
+Work Directory: /workspaces/dzhao/Projects/playground/pyvpi_example/test2_py3
+ 
+*** Message Type: info ***
+When: Tue Jun 05 03:27:01 PM MEST 2018
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Tue Jun 05 03:27:02 PM MEST 2018
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Tue Jun 05 03:27:03 PM MEST 2018
+Connect to Simulator
+      Design: worklib.top:sv
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:     ncsim(64)       15.20-s036
+        User: dzhao
+        Host: dbsrvcomp-11.diasemi.com
+Time Started: Tue Jun 05 03:26:59 PM MEST 2018
+  Process ID: 9071
+   Directory: /workspaces/dzhao/Projects/playground/pyvpi_example/test2_py3
+     Command: irun -gui -debug -64 -sv -v93 -loadvpi pyvpi.so +access+rwc -nclibdirname sim_build -plinowarn test.sv
+
+ 
+*** Message Type: info ***
+When: Tue Jun 05 03:27:04 PM MEST 2018
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Tue Jun 05 03:43:08 PM MEST 2018
+Exit NC-Sim: user
+      Design: worklib.top:sv
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:     ncsim(64)       15.20-s036
+        User: dzhao
+        Host: dbsrvcomp-11.diasemi.com
+Time Started: Tue Jun 05 03:40:18 PM MEST 2018
+  Process ID: 34307
+   Directory: /workspaces/dzhao/Projects/playground/pyvpi_example/test2_py3
+     Command: irun -gui -debug -64 -sv -v93 -loadvpi pyvpi.so +access+rwc -nclibdirname sim_build -plinowarn test.sv -s
+
+ 
+*** Message Type: error ***
+When: Tue Jun 05 03:43:08 PM MEST 2018
+NC-Sim Crashed:
+      Design: worklib.top:sv
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:     ncsim(64)       15.20-s036
+        User: dzhao
+        Host: dbsrvcomp-11.diasemi.com
+Time Started: Tue Jun 05 03:40:18 PM MEST 2018
+  Process ID: 34307
+   Directory: /workspaces/dzhao/Projects/playground/pyvpi_example/test2_py3
+     Command: irun -gui -debug -64 -sv -v93 -loadvpi pyvpi.so +access+rwc -nclibdirname sim_build -plinowarn test.sv -s
+      Design: worklib.top:sv
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:        ncsim(64)       15.20-s036
+        User: dzhao
+        Host: dbsrvcomp-11.diasemi.com
+Time Started: Tue Jun 05 03:40:18 PM MEST 2018
+  Process ID: 34307
+   Directory: /workspaces/dzhao/Projects/playground/pyvpi_example/test2_py3
+     Command: irun -gui -debug -64 -sv -v93 -loadvpi pyvpi.so +access+rwc -nclibdirname sim_build -plinowarn test.sv -s
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: Tue Jun 05 03:43:20 PM MEST 2018
+SimVision Exit.
+ 

@@ -1,0 +1,5 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(01Nov2018:15:52:15):( irun -debug -64 -sv -v93 -loadvpi pyvpi.so +access+rwc -nclibdirname sim_build -plinowarn test.sv )
